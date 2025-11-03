@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>이미지에 링크를 걸면 전체 이미지가 링크가 된다.</h3>
+<a href="https://arca.live/b/bser/117645880"><img src="images/seoul_map.png"/></a>
+
+<!--1 영역 설정-->
+<h3>map으로 이미지 특정 영역에 링크 걸기</h3>
+<map name="seoulMap" id="seoulMap" >
+<area alt="강남구청" shape="rect" coords="353,322,450,380" title="강남구청"
+href="https://arca.live/b/bser/117645880" target="blank"/>
+<area alt="서대문구" shape="rect" coords="182,190,250,230" title="서대문구"
+href="https://arca.live/b/bser/119417278" target="blank"/>
+
+</map>
+target="blank" -> 빈 창에 열어서 href의 링크 탄다.
+
+
+<!-- 2 영역을 사용 -->
+<img src="images/seoul_map.png" usemap="#seoulMap"/>
+
+</body>
+</html>

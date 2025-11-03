@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/*공통 속성은 tag selector  */
+div {
+	border: 1px solid #333;
+	width: 500px;
+	height: 300px;
+}
+
+table {
+background: #FFFFFF;
+}
+
+/*개별 속성은 다른 selector  */
+#grid {	background: #FFFFFF url(../common/images/google.png)}
+
+#x {background: #FFFFFF url(../common/images/google.png) repeat-x;}
+
+#y {background: #FFFFFF url(../common/images/google.png) repeat-y;}
+
+#norepeat {background: #FFFFFF url(../common/images/google.png) no-repeat;}
+
+body {	background: #FFFFFF url(../common/images/robot.png)}
+
+#numTitle {width:80px;}
+#numTitle {width:100px;}
+#numTitle {width:120px;}
+
+
+</style>
+</head>
+<body>
+	<div id="grid"></div>
+	<div id="x"></div>
+	<div id="y"></div>
+	<div id="norepeat"></div>
+
+	<table>
+		<thead>
+			<tr>
+				<th id="numTitle">번호</th>
+				<th id="nameTitle">이름</th>
+				<th id="scoreTitle">성적</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>1</td>
+			<td>민병조</td>
+			<td><img src="../common/images/success.png" style="width:480px; height: 10px" id="s"><img src="../common/images/fail.png" style="width:30px; height: 10px" id="f"/></td>			
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

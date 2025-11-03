@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<Table border="1">
+		<tr>
+			<td>아이디</td>
+			<td><input type="text"></td>
+			<td><input type="button" value="ID 중복확인"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="text"></td>
+			<td>비밀번호 확인</td>
+			<td><input type="text"></td>
+			<td>6~12자의 영문, 숫자, 특수문자 3가지를 조합하여 입력</td>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>생일</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>연락처</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>휴대폰</td>
+			<td><input type="text"></td>
+			<td><input type="radio">수신</td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td><input type="text">@</td> 
+			<td><input type="text" list="email"></td>
+			<datalist id="email">
+				<option value="naver.com" />
+				<option value="gmail.com" />
+				<option value="daum.net" />
+			</datalist>
+			<td><input type="radio">수신</td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td><input type="radio">남자</td>
+			<td><input type="radio">여자</td>
+		</tr>
+		<tr>
+			<td>소재지</td>
+			<td>
+			<select>
+				<option value="N/A">----선택-----</option>
+				<option value="강원">강원</option>
+				<option value="경기">경기</option>
+				<option value="경남">경남</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>우편번호</td>
+			<td><input type="text" readonly="readonly"></td>
+			<td><input type="button" value="우편번호 검색"></td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td><input type="text" readonly="readonly"></td>
+			<br>
+			<td><input type="text"></td>
+		</tr>
+	</Table>
+	<input type="button" value="확인"><input type="button" value="취소">
+</body>
+</html>

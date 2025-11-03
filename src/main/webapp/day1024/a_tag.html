@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>링크 태그 사용하기</title>
+</head>
+<body>
+<h3>다른 html의 링크 지정하기</h3>
+<a href="h_tag.html">H 태그</a><br>
+<h3>상위 폴더로 가서 상대 경로 지정</h3>
+<a href="../day1023/font.html">다른 폴더의 폰트 태그</a><br>
+<h3>URL로 링크 지정</h3>
+<a href="https://playeternalreturn.com/main?hl=ko-KR" title="이터널리턴">이터널리턴 시즌9 시작, 지금 바로 다운로드</a><br>
+
+<h3>마크업 태그 연습</h3>
+<a href="https://playeternalreturn.com/main?hl=ko-KR" title="이터널리턴">이터널리턴 시즌9 시작, 지금 바로 다운로드</a><br>
+
+<h3> 이미지에 링크 넣기 </h3>
+<a href="https://playeternalreturn.com/main?hl=ko-KR">
+	<img src="http://192.168.10.82/html_prj/day1024/images/google.png"/>
+</a>
+<h3> 현재 창에서 링크 이동, 새 창으로 링크 이동</h3>
+<a href="imgShow.html">이미지 연습 - 현재 창</a>
+(<a href="imgShow.html" target="new">이미지 연습 - 새 창으로</a>)
+
+<h3>태그의 적용 순서 : 안쪽 태그가 먼저 적용됨</h3>
+<a href="#void"><font color="red">이동</font></a>
+   <font color="red"><a href="#void">이동</a></font>
+   <h3>web browser가 해석할 수 없는 파일의 링크</h3>
+   <a href="20251024_html.pptx">PPT</a>
+   
+<h3>a 태그의 다양한 사용</h3>
+<a href="mailto:csj9630@gmail.com">이메일보내기</a>
+<br>
+<a href="tel:010-6312-4868" >전화걸기</a>
+<br>
+<a href="sms:010-6312-4868" >메시지 보내기</a>
+
+</body>
+</html>

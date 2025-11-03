@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="http://192.168.10.82/html_prj/common/images/favicon.ico">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://192.168.10.82/html_prj/common/css/main_v251031.css"/>
+<style type="text/css">
+/*min-width 설정한 넓이보다 크면 동작함*/
+@media screen and ( min-width : 800px){
+ span{ font-weight: bold; color:#FF0000 }
+ #tab{ border :1px solid #333 }
+ .num{ width: 300px }
+ .name{ width: 600px }
+ th, td{ border:  1px solid #333; color : #FF0000 }
+ #img{ display:inline; width:100%;}
+}
+/*max-width 설정한 넓이보다 작으면 동작함*/
+@media screen and ( max-width : 800px){
+ span{ font-weight: bold; color:#FF0000 }
+ #tab{ border :2px solid #333 }
+ .num{ width: 100px }
+ .name{ width: 300px }
+ th, td{ border:  1px solid #333; color : #00FF00 }
+}
+</style>
+</head>
+<body>
+<div>오늘은 <span>월요일</span> 입니다.</div>
+<table id="tab">
+<tr>
+<th class="num">번호</th><th class="name">이름</th>
+</tr>
+<tr>
+<td>1</td><td>민병조</td>y
+</tr>
+<tr>
+<td>2</td><td>임성우</td>
+</tr>
+</table><br>
+<img src="../common/images/robot.png" />
+</body>
+</html>
