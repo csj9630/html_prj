@@ -16,27 +16,23 @@
 #container{ height: 700px;	 }	
 #footer{ height: 150px;}	
 </style>
-</style>
 <script type="text/javascript">
-let name=prompt("이름을 입력해주세요!","홍길동");
-let age=prompt("나이를 입력해주세요!");
+//backtick사용.
+var name="민병조";
+var age=26;
 
-console.log(typeof(name)+" 입력 값 : "+ name );
-console.log(typeof(age)+" 입력 값 : "+ age );
+document.write("나이 "+ age +" 세. 이름 "+ name+" 입니다.<br>");
+document.write(`나이 ${ age } 세. 이름 ${ name } 입니다.`);
 
-//parseInt("문자열"),parseInt("실수") => 정수
-console.log( parseInt(age) + 10 );
-let height=183.5;
-console.log( height+" / " +parseInt( height ) );
-console.log( parseInt( "민병조" ) ); // NaN
+var msg=`나이 ${ age } 세. 이름 ${ name } 입니다.`;
 
+alert( msg );
 
 </script>
 </head>
-</head>
 <body>
 <div id="wrap">
-	<!-- wrap 1200(w) x 1000(h) -->
+	<!-- wrap 1200(w) x 1000(h) -->	
 	<div id="header"> 	 </div>
 	<div id="container"> </div>
 	

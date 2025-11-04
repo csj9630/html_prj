@@ -16,23 +16,25 @@
 #container{ height: 700px;	 }	
 #footer{ height: 150px;}	
 </style>
-</style>
 <script type="text/javascript">
-let name=prompt("이름을 입력해주세요!","홍길동");
-let age=prompt("나이를 입력해주세요!");
+var name=prompt("이름을 입력해 주세요.");
+/*
+if( name == "나경원" || name == "남지우" ||name == "박진규" ||name == "박상현" ){
+	document.write("조장 ");
+}//end if
+*/
+//입력되는 이름이 "박상현" 이라면 아래의 메시지를 흘러가게 만들어보세요.
+if( name == "박상현" ){
+	document.write("<marquee scrollamount='10'> ");
+}//end if
 
-console.log(typeof(name)+" 입력 값 : "+ name );
-console.log(typeof(age)+" 입력 값 : "+ age );
+document.write(name+"님 안녕하세요?");
 
-//parseInt("문자열"),parseInt("실수") => 정수
-console.log( parseInt(age) + 10 );
-let height=183.5;
-console.log( height+" / " +parseInt( height ) );
-console.log( parseInt( "민병조" ) ); // NaN
-
+if( name == "박상현" ){
+	document.write("</marquee");
+}//end if
 
 </script>
-</head>
 </head>
 <body>
 <div id="wrap">
