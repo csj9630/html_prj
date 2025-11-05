@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="http://192.168.10.82/html_prj/common/images/favicon.ico">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--실습에서 만든 CSS <link rel="stylesheet" type="text/css" href="http://192.168.10.82/html_prj/common/css/main_v251031.css"/>-->
+<!-- bootStrap CDN ---------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <!----------------------- bootStrap CDN -->
+ 
+<script type="text/javascript">
+	function call(evt_attr){
+		alert(`${ evt_attr }함수 호출`);
+	}
+</script>
+</head>
+<body>
+<!-- <body onload="call('HTML 로딩될때')"> -->
+<input type="button" value="클릭" onclick="call('클릭했을 때')"
+		class="btn btn-success btn-sm"/>
+		<br>
+<img src="../common/images/google.png" onclick="call('클릭했을 때')"/>
+
+<table class="table table-hover">
+<tr>
+<td onclick="call('클릭했을 때')">eclipse</td>
+</tr>
+<tr>
+<td>Editplus</td>
+</tr>
+</table>
+<br>
+<input type="button" value="더블클릭" ondblclick="call('더블 클릭했을 때')"
+		class="btn btn-warning btn-sm"/>
+		
+<div class="mb-3" style="width:400px">
+<label for="exampleFormControlInput1" class="form-label">Email address</label>
+<input type="email"  onkeydown="call('키가 눌릴때 ')" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3" style="width:400px">
+<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+<textarea class="form-control"  onkeyup="call('키가 올라올 때 ')" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+
+<label>마우스가 올라가면</label>
+<img src="../common/images/google.png" onmouseover="call('마우스가 올라갔을 때')"/><br/>
+<label>마우스가 빠져나가면</label>
+<img src="../common/images/google.png" onmouseout="call('마우스가 나갔을 때')"/><br/>
+<br>
+<label>이전에 선택한 옵션과 다른 옵션이 선택</label>
+<select onchange="call('다른 옵션이 선택되었을 때')">
+<option>A</option>
+<option>B</option>
+<option>C</option>
+</select><br>
+<label>커서가 들어갔을 때의 값과 커서가 빠져 나갔을 때의 값이 다른때</label>
+<input type="text" onchange="call('커서 전후 값이 변경되었을 때')"/><br>
+<label> 커서가 빠져 나갔을 때</label>
+<input type="text" onblur="call('커서가 빠져 나갔을 때')"/>
+
+
+		
+
+</body>
+</html>
+
