@@ -25,13 +25,51 @@ function test(){
 		return "서울시 강남구 역삼동.";
 	}
 	
-	ret
-}//test
-
-function testCall(){
-	alert(test().name);	
-	alert(test().addr());	
+	return { na:name, ad:addr }; //closure return 
 }
+
+//closure를 만들면서 호출하면 저장할 수 있도록 anonymous function 작성해야한다.
+//test2는 closure이다.
+var test2=function(){
+	var name="민병조";
+	
+	function addr(){
+		return "서울시 강남구 역삼동.";
+	}
+	
+	return { na:name, ad:addr }; //closure return 
+}();
+var test3=function(paramName,paramAge){
+	var result="성년";
+	if(paramAge < 20){
+		result="미성년";
+	}//end if
+	
+	return result;
+}("임성우",19);
+
+function useClosure(){
+	//함수 호출하면 반환되는 closure를 받아야한다. 
+	alert( test().na );
+	alert( test().ad() );
+	
+}
+function useClosure2(){
+	//test2는 함수 호출한 뒤 리턴되는 closure를 저장했기 때문에
+	//괄호 없이 함수 내부의 변수(na) 함수 ad()를 사용할 수 있게 된다.
+	alert( test2.na );
+	alert( test2.ad() );
+	
+}
+
+function useClosure3(){
+	//test3는 자신함수를 이름과 나이를 할당하여 호출한뒤 리턴되는 closure를 저장했기때문에
+	//() 없이 함수내부의 변수(na) 함수 ad()를 사용할 수 있게 된다.
+	alert( test3.na );
+	alert( test3.age() );
+	
+}
+
 </script>
 </head>
 <body>
@@ -42,7 +80,11 @@ function testCall(){
 	<div id="container">
 	<div>
 	<input type="button" value="클릭" class="btn btn-success"
-	onclick="testCall();"/>
+	onclick="useClosure();"/>
+	<input type="button" value="클릭2" class="btn btn-success"
+	onclick="useClosure2();"/>
+	<input type="button" value="클릭3" class="btn btn-success"
+	onclick="useClosure3();"/>
 	</div>
 	</div>
 	<div id="footer">footer 1200(w) x 150(h)</div>
