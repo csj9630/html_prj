@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="http://192.168.10.82/html_prj/common/images/favicon2.ico">
+<meta charset="UTF-8">
+<title>이터널리턴 지금바로다운로드</title>
+<!--실습에서 만든 CSS <link rel="stylesheet" type="text/css" href="http://192.168.10.82/html_prj/common/css/main_v251031.css"/>-->
+<!-- bootStrap CDN ---------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <!----------------------- bootStrap CDN -->
+ 
+<style type="text/css">
+#wrap{  margin: 0px auto; width: 1200px; height: 1000px; }	
+#header{ height: 150px;	 }	
+#container{ height: 700px;	 }	
+#footer{ height: 150px;}	
+</style>
+
+<!-- JQuery 세트 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!--JS 실습 파트-->
+<script type="text/javascript">
+$(function(){
+	$("#btnHide").click(hide);
+	$("#btnShow").click(show);
+	$("#btnToggle").click(toggle);
+	
+	$("#btnFadeOut").click(fadeOut);
+	$("#btnFadeIn").click(fadeIn);
+	$("#btnFadeToggle").click(fadeToggle);
+	
+	$("#btnInput").click(idChk);	
+	
+	$("#btnSlideUp").click(slideUp);
+	$("#btnSlideDown").click(slideDown);
+	$("#btnSlideToggle").click(slideToggle);
+});//ready
+
+function hide(){
+	$("#img").hide();
+}//hide
+
+function show(){
+	$("#img").show();
+}//show
+function toggle(){
+	$("#img").toggle();
+}//show
+
+//서서히 숨기거나 보이기
+function fadeOut(){
+//	$("#img").fadeOut(500);
+	$("#img").fadeOut(1500, function(){
+		$("#img").prop("src","../common/images/Scon/icon_60.png");
+		$("#img").fadeIn(2000);
+	});
+}//hide
+
+function fadeIn(){
+	$("#img").fadeIn(300);
+}//show
+function fadeToggle(){
+	$("#img").toggle(500);
+}//show
+
+function idChk(){
+	var id=$("#id").val();
+	
+	if(id.replace(/ /g,"") == ""){
+		/*
+		$("#idWarn").fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400)
+		.fadeIn(400).fadeOut(400).fadeIn(1000,function(){
+			$("#idWarn").css("font-size","50px")
+		}).fadeOut(400,function(){
+			$("#idWarn").css("font-size","18px")
+		});
+		*/
+		for(var i=0 ; i < 5 ; i++){
+		$("#idWarn").fadeIn(400).fadeOut(400);
+		}//end for
+	}//end if
+}//idchk
+
+//==========말아올리기 펼쳐 보이기=========
+function slideUp(){
+	//$("#img").fadeOut(1500);
+	$("#imgDiv").slideUp(1000);
+}//slideUp
+
+function slideDown(){
+	$("#imgDiv").slideDown(1000);
+}//slideDown
+
+function slideToggle(){
+	$("#img").slideToggle(500);
+}//slideToggle
+
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">head  er 1200(w) x 150(h) 사이트로고, 주력서비스, navigation bar</div>
+<div id="container">
+	<div>
+	<div style="height:320px" id="imgDiv">
+	<img src="../common/images/Scon/icon_01.png" id="img"/>
+	</div>
+		<input type="button" value="숨기기" class="btn btn-primary" id="btnHide"/>
+		<input type="button" value="보이기" class="btn btn-danger" id="btnShow"/>
+		<input type="button" value="딸깍" class="btn btn-success" id="btnToggle"/>
+		<br>
+		<input type="button" value="페이드아웃" class="btn btn-primary" id="btnFadeOut"/>
+		<input type="button" value="페이드인" class="btn btn-danger" id="btnFadeIn"/>
+		<input type="button" value="페이드딸깍" class="btn btn-success" id="btnFadeToggle"/>
+		<br>
+		<input type="button" value="말아올리기" class="btn btn-success" id="btnSlideUp"/>
+		<input type="button" value="펼쳐보이기" class="btn btn-info" id="btnSlideDown"/>
+		<input type="button" value="숨기기/보이기" class="btn btn-danger" id="btnSlideToggle"/>
+		
+		<div style="height: 80px">
+			<input type="text" id="id" placeholder="아이디">
+			<div id="idWarn">아이디는 필수 입력!!!</div>
+		</div>
+		<input type="button" value="입력" class="btn btn-success" id="btnInput"/>
+	
+	</div>
+	
+	</div>
+	</div>
+	<div id="footer">footer 1200(w) x 150(h)</div>
+</body>
+</html>

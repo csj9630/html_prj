@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="http://192.168.10.82/html_prj/common/images/favicon2.ico">
+<meta charset="UTF-8">
+<title>이터널리턴 지금바로다운로드</title>
+<!--실습에서 만든 CSS <link rel="stylesheet" type="text/css" href="http://192.168.10.82/html_prj/common/css/main_v251031.css"/>-->
+<!-- bootStrap CDN ---------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <!----------------------- bootStrap CDN -->
+ 
+<style type="text/css">
+#wrap{  margin: 0px auto; width: 1200px; height: 1000px; }	
+#header{ height: 150px;	 }	
+#container{ height: 700px;	 }	
+#footer{ height: 150px;}	
+</style>
+
+<!-- JQuery 세트 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!--JS 실습 파트-->
+<script type="text/javascript">
+
+$(function () {
+	$("#btnAppend").click(appendNode);
+});//ready
+
+function appendNode() {
+	$("#div").append("<div>안녕하세요</div>")
+}//appendNode
+
+//var cnt = 2;
+function append(){
+	var cnt = $("#licenseDiv div").length+1;
+	if(cnt >5){
+		alert("최대 5개");
+		return;
+	}//end if
+	
+	var appendNode=
+		`<div>
+			<label>자격사항</label>
+			<label>${cnt}</label>
+			<input type="text" name="license" style="width: 350px; margin:10px;">
+		</div>`;
+		
+	$("#licenseDiv").append( appendNode );
+}//func
+
+function remove() {
+	//cnt--;
+	if($("#licenseDiv div").length != 1){
+		alert("최소 1개");
+		return;
+	}//end if
+	$("#licenseDiv div:last").remove();
+}//remove
+
+
+function append2(){
+	var cnt=$("#comTab tbody tr").length+1;
+	
+	var createTr=`
+		<tr>
+		<td>${ cnt }.</td>
+		<td><input type="text" name="companyArr" style="width: 380px"></td>
+		<td><input type="text" name="jobArr" style="width: 180px"></td>
+		</tr>`;
+		
+	//$("#comTab tbody").last().append( createTr );	
+	$("#comTab tbody:last").append( createTr );
+	
+}//append2
+
+function remove2(){
+	if($("#comTab tbody tr").length != 1){
+		$("#comTab tbody tr:last").remove( );
+	}//end if
+}//remove2
+
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">header 1200(w) x 150(h)
+			사이트로고, 주력서비스, navigation bar
+	 </div>
+	<div id="container">
+	<div id="div">
+	</div>
+	<input type="button" value="자식노드추가" class="btn btn-success" id="btnAppend"/>
+	<div style="width:400px">
+	<div style="text-align: right;">
+	<a href="#void" onclick="append()"><img src="../common/images/btn_append.png"></a>
+	<a href="#void" onclick="remove()"><img src="../common/images/btn_remove.png"></a>
+	</div>
+	<div id="licenseDiv">
+		<div><label>자격사항</label><br>
+		
+			<label>1.</label> <input type="text" name="license" style="width: 350px">
+		</div>
+	</div>
+	</div>
+	
+	<div style="width:650px">
+	<div style="text-align: right;">
+	<a href="#void" onclick="append2()"><img src="../common/images/btn_append.png"></a>
+	<a href="#void" onclick="remove2()"><img src="../common/images/btn_remove.png"></a>
+	</div>
+	
+	<table id="comTab" class="table table-striped">
+	<thead>
+	<tr>
+		<th style="width:50px">번호</th>
+		<th style="width:400px">근무처</th>
+		<th style="width:200px">직무</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>1.</td>
+	<td><input type="text" name="companyArr" style="width: 380px"></td>
+	<td><input type="text" name="jobArr" style="width: 180px"></td>
+	</tr>
+	</tbody>	
+	</table>
+	</div>
+	
+	</div>
+	<div id="footer">footer 1200(w) x 150(h)</div>
+</div>
+</body>
+</html>
